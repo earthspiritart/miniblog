@@ -1,0 +1,36 @@
+<%- model_class = Article -%>
+<div class="page-header">
+  <h1>Search Results</h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:heading) %></th>
+      <th><%= model_class.human_attribute_name(:story) %></th>
+      <th><%= model_class.human_attribute_name(:publish_date) %></th>
+      <th><%= model_class.human_attribute_name(:author) %></th>
+      <th><%= model_class.human_attribute_name(:image) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= link_to article.id, article_path(article) %></td>
+        <td><%= article.heading %></td>
+        <td><%= article.story %></td>
+        <td><%= article.publish_date %></td>
+        <td><%= link_to(article.author, search_path(author: article.author)) %></td>
+        <td><%= article.image %></td>
+        <td><%=l article.created_at %></td>
+      
+
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate(@articles) %>
