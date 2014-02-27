@@ -1,4 +1,5 @@
 Miniblog::Application.routes.draw do
+  resources :users, only:[:new, :create]
   resources :articles, only: [:index, :show] do
     resource :comments
   end
@@ -10,6 +11,13 @@ Miniblog::Application.routes.draw do
   root 'articles#index'
   get '/about' => 'static#about'
   get '/search' => 'search#results'
+
+  get '/login' => 'session#new'
+
+  post '/login' => 'session#create'
+  delete "/logout" => "session#logout"
+
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

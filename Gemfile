@@ -4,9 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.2'
 
 gem "therubyracer"
-
 gem "less-rails"
-
 gem "twitter-bootstrap-rails"
 
 # Use sqlite3 as the database for Active Record
@@ -43,7 +41,7 @@ gem "kaminari"
 
 
 #Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.1.2'
+gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use unicorn as the app server
 # gem 'unicorn'

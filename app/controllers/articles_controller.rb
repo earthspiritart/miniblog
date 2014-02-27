@@ -4,10 +4,11 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
+
     @articles = Article.all.page(params[:page]).per(3)
   end
 
-  # GET /articles/1
+  # GET /articles/1s
   # GET /articles/1.json
   def show
     @comment = @article.comments.build

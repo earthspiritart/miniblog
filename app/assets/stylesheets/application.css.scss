@@ -1,0 +1,57 @@
+/*
+* this is a manifest
+ *= require bootstrap_and_overrides
+ *= require_self
+*/
+
+$orange: #ffaa00;
+$purple: #B01CD4;
+
+.page-header{
+  background-color: #EEE9E5;
+  padding: 5px 0 0 20px;
+h1    {
+    color: white;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-family: Courier;
+   
+  }
+}
+
+.paging {
+   font-size: 18px;
+a {
+  color: orange;
+  &:hover{
+    text-decoration: none;
+    color: darken($orange, 10%)
+    }
+  }
+}
+
+
+.sidebar-nav {
+  background-color: #EEE9E5;
+}
+
+.container-fluid.nav-collapse {
+  background-color: #EEE9E5;
+}
+
+.brand {
+  background-color: #EEE9E5;
+}
+
+.navbar-inner {
+  background-color: #EEE9E5;
+}
+.navbar.navbar-fluid-top {
+  background-color: #EEE9E5;
+}
+
+
+body {
+  background-color: lightblue;
+}
+

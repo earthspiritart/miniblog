@@ -15,5 +15,9 @@ module ApplicationHelper
 
   end
 
+  def logged_in?
+    current_user.present?
+  end
+
 
 end
