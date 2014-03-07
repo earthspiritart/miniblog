@@ -1,0 +1,20 @@
+<h1>new</h2>
+
+
+    <%= form_for([:admin, @article]) do |f| %>
+  <div class="control-group">
+    <%= f.label(:heading ) %>
+    <%= f.text_field(:heading) %>
+  </div>
+  <div class="control-group">
+    <%= f.label(:story ) %>
+    <%= f.text_field(:story) %>s
+  </div>
+  <div class="control-group">
+    <%= f.label(:author_id) %>
+    <%= f.select(:author_id, options_for_select(Author.all.collect {|a| [a.name, a.id]})) %> 
+  </div>
+  <div class="control-group">
+    <%= f.submit("Submit") %>
+  </div>
+    <% end %>

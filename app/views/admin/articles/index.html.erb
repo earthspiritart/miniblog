@@ -1,0 +1,20 @@
+<%= link_to("New", new_admin_article_path) %>
+
+<h1>Admin Index</h1>
+
+<table class="table table-striped">
+  <tbody>
+    <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.author %></td>
+      <td><%= article.story %></td>
+      <td><%= link_to "Edit Article", edit_admin_article_path(article) %></td>
+      <td> <%= link_to "Delete", admin_article_path(article), method: :delete, confirm: "sure?" %></td>
+
+    </tr>
+
+s
+    <% end %>
+  </tbody>
+
+  </table>
